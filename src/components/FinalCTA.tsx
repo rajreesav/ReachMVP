@@ -1,46 +1,36 @@
 import { Button } from "@/components/ui/button";
-import { Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+const CALENDLY_URL = "https://calendly.com/reesavraj7761/30min";
 
 const FinalCTA = () => {
   return (
-    <section id="contact" className="relative py-24 overflow-hidden scroll-mt-20">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 blur-3xl" />
-        <div className="absolute inset-0 grid-pattern opacity-30" />
-      </div>
-      
+    <section className="relative py-24 overflow-hidden">
+      {/* Subtle radial glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-primary/5 rounded-full blur-[120px]" />
+
       <div className="container relative z-10 mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          {/* Main heading */}
-          <div className="space-y-4">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Your Idea, Live{" "}
-              <span className="text-gradient">in 48 Hours.</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Stop planning. Start building. Let's hop on a call and map out your MVP.
-            </p>
-          </div>
-          
-          {/* CTA Button */}
-          <div className="pt-8">
-            <Button 
-              size="lg" 
-              variant="cta"
-              className="text-xl px-12 py-8 h-auto group"
+        <div className="max-w-2xl mx-auto text-center space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+            Ready to Turn Your Web Traffic into a{" "}
+            <span className="text-gradient">Mobile Growth Engine?</span>
+          </h2>
+
+          <div className="pt-4">
+            <Button
+              size="lg"
+              className="text-lg px-10 py-6 h-auto bg-primary text-primary-foreground hover:bg-primary/90 group"
               asChild
             >
-              <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer">
-                <Calendar className="mr-3 w-6 h-6" />
-                Book Your Call Now
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                Book Strategy Call
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
           </div>
-          
-          {/* Supporting text */}
-          <p className="text-sm text-muted-foreground pt-4">
-            No commitment required. Let's discuss your vision and see if we're a good fit.
+
+          <p className="text-sm text-muted-foreground">
+            No commitment required. A focused 30-minute conversation about your product.
           </p>
         </div>
       </div>
